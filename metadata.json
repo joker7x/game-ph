@@ -1,0 +1,6 @@
+{
+  "name": "Pharmacy 24 - صيدلية 24",
+  "description": "لعبة محاكاة وإدارة صيدلية مصرية ثلاثية الأبعاد بأسلوب كرتوني باستيل ممتع ومميز - بيع الأدوية، تلبية الروشتات، طلب النواقص وتطوير الصيدلية.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

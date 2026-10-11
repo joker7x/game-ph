@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Safe area insets for mobile devices (iPhone notch & home indicator) */
+  .pt-safe {
+    padding-top: max(0.5rem, env(safe-area-inset-top));
+  }
+  .pb-safe {
+    padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* 3D Game Pressable Buttons */
+.game-btn {
+  position: relative;
+  transition: all 0.12s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+
+.game-btn:active {
+  transform: translateY(3px);
+}
+
+.game-btn-green {
+  background: linear-gradient(180deg, #34d399 0%, #059669 100%);
+  border: 2px solid #a7f3d0;
+  box-shadow: 0 4px 0 #047857, 0 6px 10px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+}
+.game-btn-green:active {
+  box-shadow: 0 1px 0 #047857, 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.game-btn-gold {
+  background: linear-gradient(180deg, #fbbf24 0%, #d97706 100%);
+  border: 2px solid #fef08a;
+  box-shadow: 0 4px 0 #b45309, 0 6px 10px rgba(0, 0, 0, 0.2);
+  color: #451a03;
+}
+.game-btn-gold:active {
+  box-shadow: 0 1px 0 #b45309, 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.game-btn-coral {
+  background: linear-gradient(180deg, #fb7185 0%, #e11d48 100%);
+  border: 2px solid #fecdd3;
+  box-shadow: 0 4px 0 #be123c, 0 6px 10px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+}
+.game-btn-coral:active {
+  box-shadow: 0 1px 0 #be123c, 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.game-btn-blue {
+  background: linear-gradient(180deg, #38bdf8 0%, #0284c7 100%);
+  border: 2px solid #bae6fd;
+  box-shadow: 0 4px 0 #0369a1, 0 6px 10px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+}
+.game-btn-blue:active {
+  box-shadow: 0 1px 0 #0369a1, 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.game-btn-white {
+  background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+  border: 2px solid #e2e8f0;
+  box-shadow: 0 4px 0 #cbd5e1, 0 5px 8px rgba(0, 0, 0, 0.1);
+  color: #1e293b;
+}
+.game-btn-white:active {
+  box-shadow: 0 1px 0 #cbd5e1, 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Strict mobile viewport bounds - No horizontal or bounce scrolling */
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  max-height: 100dvh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden !important;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+  position: fixed;
+  inset: 0;
+}
+
+canvas {
+  touch-action: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
